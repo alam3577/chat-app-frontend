@@ -13,26 +13,187 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #e8f2f5;
 }
 
 .App-link {
   color: #61dafb;
 }
 
+.message__container {
+  background-color: #ffffff;
+  width: 49vw;
+  height: 80vh;
+  margin: auto;
+  margin-top: 10vh;
+  border-radius: 10px;
+  box-shadow: 5px 6px 20px 0px grey;
+  position: relative;
+}
+.message__container h2 {
+  margin: auto;
+  text-align: center;
+  font-family: "Ephesis", cursive;
+  font-size: 40px;
+}
+.send__container {
+  position: absolute;
+  bottom: -2px;
+  width: 100%;
+  padding: 6px;
+}
+.send__container input {
+  width: 79%;
+  padding: 7px;
+  outline: none;
+  font-size: 25px;
+  border: 1px solid white;
+  border-radius: 7px;
+  outline: 0px;
+  box-shadow: 2px 5px 20px 0px #bce6e6;
+}
+.send__container button {
+  font-size: 14px;
+  width: 124px;
+  margin-left: 8px;
+  height: 31px;
+  border: 1px solid wheat;
+  color: #1c1cba;
+  border-radius: 10px;
+  background: springgreen;
+  outline: 0px;
+  height: 46px;
+}
+.message__cont {
+  border: 1px solid olivedrab;
+}
+
+.messageBox {
+  background-color: #dee6cd;
+  width: fit-content;
+  margin: 9px;
+  padding: 11px;
+  border: 0px;
+  border-radius: 9px;
+  display: inline-block;
+  clear: both;
+}
+
+.right {
+  float: right;
+  background-color: #6fd3ff;
+  color: white;
+  text-align: right;
+}
+
+.left {
+  float: left;
+  text-align: left;
+  background-color: rgb(196, 255, 184);
+}
+
+.login__container {
+  background-color: #ffffff;
+  width: 39vw;
+  height: fit-content;
+  margin: auto;
+  margin-top: 10vh;
+  border-radius: 10px;
+  box-shadow: 5px 6px 20px 0px grey;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login__container h2 {
+  margin: 23px 0px;
+  font-family: "Ephesis", cursive;
+  font-size: 40px;
+}
+
+.login__container input {
+  font-size: xx-large;
+  margin-top: 57px;
+  margin-bottom: 37px;
+  font-family: "Ephesis", cursive;
+  width: 28vw;
+  border: 0px;
+  border-radius: 7px;
+  padding-left: 15px;
+  outline: 0px;
+  box-shadow: 2px 5px 20px 0px #d5dede;
+}
+
+.login__container button {
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 9px;
+  width: 28vw;
+  font-family: "Ephesis", cursive;
+  height: 59px;
+  border: 1px solid wheat;
+  color: #1c1cba;
+  border-radius: 10px;
+  background: springgreen;
+  margin-bottom: 20px;
+}
+
+.login__container button:hover {
+  background: rgb(28, 31, 29);
+  color: antiquewhite;
+  transition: 0.9s;
+}
+.scroll__container {
+  height: 80%;
+  box-sizing: border-box;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .login__container button {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .login__container button {
+    font-size: 1.7rem;
+    width: 80%;
+  }
+  .login__container input {
+    font-size: 2.5rem;
+    width: 80%;
+  }
+  .login__container {
+    width: 89vw;
+  }
+  .login__container h2 {
+    font-size: 1.9rem;
+    font-weight: bolder;
+  }
+  .message__container {
+    width: 89vw;
+  }
+  .send__container input {
+    width: 95%;
+    margin-bottom: 5px;
+    align-content: center;
+  }
+  .send__container button {
+    width: 95%;
   }
 }
