@@ -44,7 +44,7 @@ const Chat = (props) => {
       socket.emit("disconnect");
       socket.off();
     };
-  });
+  }, []);
 
   useEffect(() => {
     socket.on("send-message", (data) => {
