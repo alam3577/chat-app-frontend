@@ -22,6 +22,13 @@ const Chat = (props) => {
     setValue("");
   };
 
+  let handleEnter = (e) => {
+    e.preventDefault();
+    if (e.keyCode === 13) {
+      handleSend();
+    }
+  };
+
   useEffect(() => {
     socket = socketIo(ENDPOINT, { transports: ["websocket"] });
     socket.on("connect", () => {
@@ -62,12 +69,7 @@ const Chat = (props) => {
     });
   }, [message]);
   console.log(message);
-  let handleEnter = (e) => {
-    e.preventDefault();
-    if (e.keyCode === 13) {
-      handleSend();
-    }
-  };
+
   return (
     <div className="main__chatt__container">
       <div className="message__container">
@@ -93,13 +95,15 @@ const Chat = (props) => {
             value={value}
             name=""
             id="keyss"
-            onKeyUp={handleEnter}
+            onKeyUp={(e) => {
+              handleEnter(e);
+            }}
           />
           <button onClick={handleSend}>Send Message</button>
         </div>
       </div>
       <div className="online__user">
-        <Online key users={online} />
+        <Online users={online} />
       </div>
     </div>
   );
