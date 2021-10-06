@@ -93,9 +93,7 @@ const Chat = (props) => {
             value={value}
             name=""
             id="keyss"
-            onKeyUp={(e) => {
-              handleEnter(e);
-            }}
+            onKeyUp={handleEnter}
           />
           <button onClick={handleSend}>Send Message</button>
         </div>
