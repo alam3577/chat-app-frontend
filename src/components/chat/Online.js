@@ -9,12 +9,10 @@ function Online({ users }) {
       </div>
       <label className="circle"></label>
       {users.map((elem, i) => (
-        <>
-          <div className="green__align">
-            <div className="green__circle"></div>
-            <h4>{elem}</h4>
-          </div>
-        </>
+        <div key={i} className="green__align">
+          <div className="green__circle"></div>
+          <h4>{elem}</h4>
+        </div>
       ))}
     </>
   );

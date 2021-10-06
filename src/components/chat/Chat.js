@@ -60,8 +60,6 @@ const Chat = (props) => {
     socket.on("send-message", (data) => {
       setMessage([...message, data]);
     });
-
-    return () => {};
   }, [message]);
   console.log(message);
   let handleEnter = (e) => {
