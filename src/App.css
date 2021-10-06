@@ -154,6 +154,42 @@ body {
   height: 80%;
   box-sizing: border-box;
 }
+.main__chatt__container {
+  display: flex;
+}
+.online__user {
+  background: #ffffff;
+  border: 0px solid black;
+  margin-top: 10vh;
+  margin-right: 15vw;
+  width: 15vw;
+  border-radius: 12px;
+  padding: 13px;
+  box-shadow: 2px 2px 20px 0px #b68181;
+}
+h3 {
+  font-family: cursive;
+}
+.green__circle {
+  width: 10px;
+  height: 10px;
+  background-color: #35f419;
+  border-radius: 50%;
+  margin: 8px 7px 0px 0px;
+}
+.online__user_q {
+  display: flex;
+  align-items: center;
+}
+.user__count {
+  background-color: #4f564f;
+  margin-left: 8px;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  color: #fffcfc;
+  padding-left: 6px;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -196,4 +232,8 @@ body {
   .send__container button {
     width: 95%;
   }
+}
+.green__align {
+  display: flex;
+  align-items: center;
 }
